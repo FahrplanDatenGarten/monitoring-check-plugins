@@ -1,0 +1,11 @@
+Source: {{ package_name }}
+Priority: optional
+Section: unknown
+Maintainer: {{ maintainer.name }} <{{ maintainer.email }}>
+Build-Depends: debhelper (>= 11)
+Standards-Version: 4.1.3
+
+Package: {{ package_name }}
+Architecture: all
+Depends: ${shlibs:Depends}, ${misc:Depends}, {% for dependency in package_dependencies %}{{ dependency }}{% if not loop.last %}, {% endif %}{% endfor %}
+Description: {{ package_description }}
