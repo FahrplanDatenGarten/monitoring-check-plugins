@@ -1,0 +1,8 @@
+Origin: repo.fahrplandatengarten.de
+Suite: debian
+Label: FahrplanDatenGarten-Monitoring debian repo
+Codename: stable
+Architectures: amd64 i386 arm64
+Components: main
+Description: Apt repository for FahrplanDatenGarten monitoring checks
+SignWith: 6499CFD356A497090B184F939E065B83CD14C197
