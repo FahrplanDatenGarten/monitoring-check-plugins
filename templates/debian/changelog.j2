@@ -1,7 +1,7 @@
-{% for version in versions %}
-{{ package_name }} ({{ version.version_code }}) stable; urgency=medium
+{% for version in versions %}{{ package_name }} ({{ version.version_code }}) stable; urgency=medium
 
   {{ version.changelog }}
 
--- {{ maintainer.name }} <{{maintainer.email}}>  {{ version.date }}
+ -- {{ maintainer.name }} <{{maintainer.email}}>  {{ version.date }}
+
 {% endfor %}

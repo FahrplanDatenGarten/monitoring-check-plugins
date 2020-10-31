@@ -6,4 +6,3 @@ packages:
 remote_repository:
   base_url: https://static.labcode.de/build/repos/debian
   packages_file: https://static.labcode.de/build/repos/debian/dists/buster/main/binary-amd64/Packages
-#remote_repository_url: https://repos.fahrplandatengarten.de/debian

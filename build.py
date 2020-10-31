@@ -180,7 +180,7 @@ def main():
             project_metadata['remote_repository']['packages_file'])
 
         for local_package in local_packages_metadata.values():
-            if local_package['version'] > remote_packages_current[local_package['package_name']]:
+            if local_package['version'] > remote_packages_current.get(local_package['package_name'], "0.0.0"):
                 packages_to_build.append(local_package['package_name'])
 
     build_orig_tarballs(packages_to_build, local_packages_metadata)
