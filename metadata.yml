@@ -5,5 +5,5 @@ packages:
   - check_celery
   - meta_all
 remote_repository:
-  base_url: https://static.labcode.de/build/repos/debian
-  packages_file: https://static.labcode.de/build/repos/debian/dists/buster/main/binary-amd64/Packages
+  base_url: https://repo.fahrplandatengarten.de/debian/monitoring
+  packages_file: https://repo.fahrplandatengarten.de/debian/monitoring/dists/stable/main/binary-amd64/Packages

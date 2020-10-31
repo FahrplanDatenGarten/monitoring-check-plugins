@@ -30,9 +30,13 @@ app = Celery(
 i = app.control.inspect()
 worker_ping = i.ping()
 
-online_workers = [worker[0] for worker in worker_ping.items()]
-online_workers.sort()
-online_workers_str = "Online workers are: " + ", ".join(online_workers)
+if worker_ping is not None:
+    online_workers = [worker[0] for worker in worker_ping.items()]
+    online_workers.sort()
+    online_workers_str = "Online workers are: " + ", ".join(online_workers)
+else:
+    online_workers_str = "No worker is online"
+    worker_ping = []
 
 if len(worker_ping) < args.threshold_critical:
     if args.threshold_warn:
