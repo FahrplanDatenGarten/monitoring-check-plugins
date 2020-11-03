@@ -3,6 +3,7 @@ maintainer:
   name: FahrplanDatenGarten Debian Packaging Team
 packages:
   - check_celery
+  - check_mem
   - meta_all
 remote_repository:
   base_url: https://repo.fahrplandatengarten.de/debian/monitoring

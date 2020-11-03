@@ -1,0 +1,3 @@
+[submodule "check_mem/source"]
+	path = check_mem/source
+	url = https://github.com/justintime/nagios-plugins.git
