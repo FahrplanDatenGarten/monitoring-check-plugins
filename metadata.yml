@@ -5,6 +5,7 @@ packages:
   - check_celery
   - check_mem
   - meta_all
+  - meta_essential
 remote_repository:
   base_url: https://repo.fahrplandatengarten.de/debian/monitoring
   packages_file: https://repo.fahrplandatengarten.de/debian/monitoring/dists/stable/main/binary-amd64/Packages
