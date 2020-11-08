@@ -1,0 +1,2 @@
+nagios ALL=NOPASSWD: /sbin/zfs
+nagios ALL=NOPASSWD: /usr/lib/monitoring/plugins/check_zfs
