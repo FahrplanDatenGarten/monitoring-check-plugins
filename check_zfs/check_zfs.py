@@ -41,8 +41,9 @@ import os
 
 # This check only works in a subset of the actual times we need it, but it is a good effort regardless.
 def pythonVersionCheck():
+    # Python 3.5 is current released version on Ubuntu 16.04, the oldest version supported. LTS remains supported through 2021.
     MinimumPython_MajorVersionNumber = 3
-    MinimumPython_MinorVersion = 6
+    MinimumPython_MinorVersion = 5
 
     majorMinor = sys.version_info[:2]
     major = majorMinor[0]
@@ -126,7 +127,7 @@ def CheckForExistenceOfCommands(parser):
     CheckIfFileExists(parser, zfsCommand)
 
 def LogWarningRootProcessWarningAndExit(contextString, stateNum, optionalException=None):
-    # If the script is failing to run because of this line, you are likely running too old a version of Pyton. I wish it were possible to make the script just print this
+    # If the script is failing to run because of this line, you are likely running too old a version of Python. I wish it were possible to make the script just print this
     # clearly rather than crash, but it's not possible: https://stackoverflow.com/questions/446052/how-can-i-check-for-python-version-in-a-program-that-uses-new-language-features
     # The version check done above helps in some cases, but won't fix when this f-string language feature fails to compile.
     warningString = f'{nagiosStatus[stateNum]} : process must be run as root. Possible solution: add the following to your visudo: nagios ALL=NOPASSWD: Context: {contextString}, then run check script with --nosudo option.'
