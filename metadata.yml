@@ -5,6 +5,7 @@ packages:
   - check_celery
   - check_mem
   - check_zfs
+  - check_ssl_cert
   - meta_all
   - meta_essential
 remote_repository:

@@ -6,6 +6,7 @@ dependencies:
   - fdgmon-check-celery
   - fdgmon-check-mem
   - fdgmon-check-zfs
+  - fdgmon-check-ssl-cert
 description: Meta package containing all packages
 source_maintainer: FahrplanDatenGarten Debian Packaging Team <debian@fahrplandatengarten.de>
 source_license: MIT
