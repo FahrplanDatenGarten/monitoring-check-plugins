@@ -4,8 +4,9 @@ maintainer:
 packages:
   - check_celery
   - check_mem
-  - check_zfs
+  - check_postgres
   - check_ssl_cert
+  - check_zfs
   - meta_all
   - meta_essential
 remote_repository:
