@@ -3,6 +3,7 @@ maintainer:
   name: FahrplanDatenGarten Debian Packaging Team
 packages:
   - check_celery
+  - check_last_run
   - check_mem
   - check_postgres
   - check_ssl_cert
