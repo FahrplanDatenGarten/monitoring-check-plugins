@@ -2,6 +2,7 @@ maintainer:
   email: debian@fahrplandatengarten.de
   name: FahrplanDatenGarten Debian Packaging Team
 packages:
+  - check_borgmatic_last_run
   - check_celery
   - check_last_run
   - check_mem
