@@ -4,29 +4,29 @@
 while getopts d:h: opts; do
    case ${opts} in
       d) FILE_PATH=${OPTARG} ;;
-      h) HOURS=${OPTARG} ;;
+      h) MAX_HOURS=${OPTARG} ;;
    esac
 done
 
-last_timestamp_file=$(cat "$FILE_PATH")
+last_backup_date_string=$(cat "$FILE_PATH")
 
 # Calculate timestamp from string
-last_timestamp=$(date --date="$last_timestamp_file" +"%s")
-now_timestamp=$(date +"%s")
+last_timestamp_date=$(date --date="$last_backup_date_string" +"%s")
+now_timestamp_date=$(date +"%s")
 
 # Calculate allowed difference in seconds
-sec=$(( HOURS * 3600 ))
+seconds=$(( MAX_HOURS * 3600 ))
 
 # Calculate compare timestamp
-compare=$(( last_timestamp + sec))
-timestamp_diff_hours=$(((now_timestamp - last_timestamp) / 3600))
+compare=$(( last_timestamp_date + seconds))
+timestamp_diff_hours=$(( (now_timestamp_date - last_timestamp_date) / 3600 ))
 
 # Compare current timestamp with compare timestamp
-if [ $compare -gt $now_timestamp ]
+if [ $compare -gt $now_timestamp_date ]
 then
-	echo "OK: Last run finished: $last_timestamp_file, max $HOURS h (is $timestamp_diff_hours h)"
+	echo "OK: Last run finished: $last_backup_date_string, max $MAX_HOURS h (is $timestamp_diff_hours h)"
 	exit 0
 fi
 
-echo "CRITICAL: Last run finished: $last_timestamp_file, max $HOURS h (is $timestamp_diff_hours h)"
+echo "CRITICAL: Last run finished: $last_backup_date_string, max $MAX_HOURS h (is $timestamp_diff_hours h)"
 exit 2
