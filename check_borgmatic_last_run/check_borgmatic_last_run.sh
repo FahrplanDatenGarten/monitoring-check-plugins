@@ -5,7 +5,7 @@ while getopts h: opts; do
    esac
 done
 
-last_backup_date_string=$(borgmatic list --successful --last 1 --json | jq ".[0].archives[0].time" -r)
+last_backup_date_string=$(sudo borgmatic list --successful --last 1 --json | jq ".[0].archives[0].time" -r)
 
 # Calculate timestamp from string
 last_timestamp_date=$(date --date="$last_backup_date_string" +"%s")
