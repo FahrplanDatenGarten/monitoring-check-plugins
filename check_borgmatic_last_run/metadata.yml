@@ -2,7 +2,7 @@ package_name: fdgmon-check-borgmatic-last-run
 directory_name: check_borgmatic_last_run
 files:
   - src: check_borgmatic_last_run.sh
-    dest: usr/lib/monitoring/plugins/check_borgmatic_last_run
+    dest: usr/lib/monitoring/plugins/check_borgmatic_last_run.sh
     mode: 755
   - src: sudoers
     dest: /etc/sudoers.d/fdgmon-check-borgmatic-last-run
