@@ -2,11 +2,14 @@ maintainer:
   email: debian@fahrplandatengarten.de
   name: FahrplanDatenGarten Debian Packaging Team
 packages:
+  - check_borgmatic_last_run
   - check_celery
   - check_celery_tasks
+  - check_last_run
   - check_mem
-  - check_zfs
+  - check_postgres
   - check_ssl_cert
+  - check_zfs
   - meta_all
   - meta_essential
 remote_repository:
