@@ -5,6 +5,7 @@ packages:
   - check_borgmatic_last_run
   - check_celery
   - check_celery_tasks
+  - check_dyndns_record
   - check_last_run
   - check_mem
   - check_postgres
