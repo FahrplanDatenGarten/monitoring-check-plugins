@@ -1,4 +1,4 @@
-package_name: fdgmon-check-dyndns-recod
+package_name: fdgmon-check-dyndns-record
 directory_name: check_dyndns_record
 files:
   - src: check_dyndns_record.sh
